@@ -10,3 +10,5 @@ __recovery
 *.vlb
 *.stat
 *.dcu
+Packages/Win32
+Packages/Win64
