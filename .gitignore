@@ -12,3 +12,5 @@ __recovery
 *.dcu
 Packages/Win32
 Packages/Win64
+GetItPackage/Toolbar2000-2.2.3.zip
+GetItPackage/LICENSE.txt

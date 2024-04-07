@@ -1,0 +1,275 @@
+{
+	"Id": "Toolbar2000-2.2.3",
+	"Name": "Toolbar2000",
+	"Version": "2.2.3",
+	"Description": "Toolbar2000 is a set of neat menus and toolbars components for Delphi / C++Builder.",
+	"Vendor": "Jordan Russell",
+	"VendorUrl": "https://jrsoftware.org",
+	"Image": "Toolbar2000.png",
+	"License": "LICENSE.txt",
+	"Url": "Toolbar2000-2.2.3.zip",
+	"ProjectUrl": "https://jrsoftware.org/tb2k.php",
+	"Modified": "2021-12-01 00:15:15",
+	"LicenseName": "Dual License",
+	"RequireElevation": "0",
+	"AllUsers": "0",
+	"Actions": [
+		{
+			"Id": "1",
+			"ActionId": "6",
+			"Type": "2",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Packages\\TB2000_Run.dproj"
+				},
+				{
+					"Parameter": "Win32;Win64"
+				},
+				{
+					"Parameter": "Release"
+				}
+			],
+			"ActionName": "CompileProject",
+			"Description": "Compile TB2000_Run.dproj"
+		},
+		{
+			"Id": "2",
+			"ActionId": "6",
+			"Type": "2",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Packages\\TB2000_Dsgn.dpk"
+				},
+				{
+					"Parameter": "Win32"
+				},
+				{
+					"Parameter": "Release"
+				}
+			],
+			"ActionName": "CompileProject",
+			"Description": "Compile TB2000_Dsgn.dproj"
+		},
+		{
+			"Id": "3",
+			"ActionId": "24",
+			"Type": "4",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "HKEY_CURRENT_USER\\Software\\Embarcadero\\BDS\\$(PRODUCTVERSION)\\Known Packages"
+				},
+				{
+					"Parameter": "$(BDSCOMMONDIR)\\Bpl\\TB2000_Dsgn.bpl"
+				},
+				{
+					"Parameter": "Toolbar2000 Design Package (Jordan Russell)"
+				}
+			],
+			"ActionName": "AddValueToRegistry",
+			"Description": "Install TB2000_Dsgn.bpl"
+		},
+		{
+			"Id": "4",
+			"ActionId": "1",
+			"Type": "4",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Packages\\Win32\\Release"
+				},
+				{
+					"Parameter": "cPasLibraryPath"
+				},
+				{
+					"Parameter": "Delphi.Personality"
+				},
+				{
+					"Parameter": "Win32"
+				}
+			],
+			"ActionName": "AddOptionPath",
+			"Description": "Add Win32 to Library Path"
+		},
+		{
+			"Id": "5",
+			"ActionId": "1",
+			"Type": "4",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Packages\\Win64\\Release"
+				},
+				{
+					"Parameter": "cPasLibraryPath"
+				},
+				{
+					"Parameter": "Delphi.Personality"
+				},
+				{
+					"Parameter": "Win64"
+				}
+			],
+			"ActionName": "AddOptionPath",
+			"Description": "Add Win64 to Library Path"
+		},
+		{
+			"Id": "6",
+			"ActionId": "1",
+			"Type": "4",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Source"
+				},
+				{
+					"Parameter": "cPasBrowsingPath"
+				},
+				{
+					"Parameter": "Delphi.Personality"
+				}
+			],
+			"ActionName": "AddOptionPath",
+			"Description": "Add Source to Browsing Path"
+		},
+		{
+			"Id": "7",
+			"ActionId": "21",
+			"Type": "4",
+			"RequireElevation": "0",
+			"Parameter": [
+			],
+			"ActionName": "RestartIDE",
+			"Description": "User must restart the IDE to apply these changes"
+		},
+		{
+			"Id": "8",
+			"ActionId": "2",
+			"Type": "5",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Packages\\Win32\\Release"
+				},
+				{
+					"Parameter": "cPasLibraryPath"
+				},
+				{
+					"Parameter": "Delphi.Personality"
+				},
+				{
+					"Parameter": "Win32"
+				}
+			],
+			"ActionName": "RemoveOptionPath",
+			"Description": "Remove Win32 to Library Path"
+		},
+		{
+			"Id": "9",
+			"ActionId": "2",
+			"Type": "5",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Packages\\Win64\\Release"
+				},
+				{
+					"Parameter": "cPasLibraryPath"
+				},
+				{
+					"Parameter": "Delphi.Personality"
+				},
+				{
+					"Parameter": "Win64"
+				}
+			],
+			"ActionName": "RemoveOptionPath",
+			"Description": "Remove Win64 to Library Path"
+		},
+		{
+			"Id": "10",
+			"ActionId": "2",
+			"Type": "5",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Source"
+				},
+				{
+					"Parameter": "cPasBrowsingPath"
+				},
+				{
+					"Parameter": "Delphi.Personality"
+				}
+			],
+			"ActionName": "RemoveOptionPath",
+			"Description": "Remove Source to Browsing Path"
+		},
+		{
+			"Id": "11",
+			"ActionId": "25",
+			"Type": "5",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "HKEY_CURRENT_USER\\Software\\Embarcadero\\BDS\\$(PRODUCTVERSION)\\Known Packages"
+				},
+				{
+					"Parameter": "$(BDSCOMMONDIR)\\Bpl\\TB2000_Dsgn.bpl"
+				}
+			],
+			"ActionName": "DeleteValueFromRegistry",
+			"Description": "Uninstall TB2000_Dsgn.bpl"
+		},
+		{
+			"Id": "12",
+			"ActionId": "29",
+			"Type": "5",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Packages\\TB2000_Dsgn.dproj"
+				},
+				{
+					"Parameter": "Win32"
+				},
+				{
+					"Parameter": "Release"
+				}
+			],
+			"ActionName": "CleanProject",
+			"Description": "Clean TB2000_Dsgn.dproj"
+		},
+		{
+			"Id": "13",
+			"ActionId": "29",
+			"Type": "5",
+			"RequireElevation": "0",
+			"Parameter": [
+				{
+					"Parameter": "Packages\\TB2000_Run.dproj"
+				},
+				{
+					"Parameter": "Win32;Win64"
+				},
+				{
+					"Parameter": "Release"
+				}
+			],
+			"ActionName": "CleanProject",
+			"Description": "Clean TB2000_Run.dproj"
+		},
+		{
+			"Id": "14",
+			"ActionId": "21",
+			"Type": "6",
+			"RequireElevation": "0",
+			"Parameter": [
+			],
+			"ActionName": "RestartIDE",
+			"Description": "User must restart the IDE to apply these changes"
+		}
+	]
+}
